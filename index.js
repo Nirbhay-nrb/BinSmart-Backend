@@ -21,8 +21,10 @@ app.use(cors(
 ));
 
 // Importing routes
+const testRoute = require('./routes/test');
 
 // Using routes
+app.use('/test', testRoute);
 
 // Start server
 app.listen(port, () => {
