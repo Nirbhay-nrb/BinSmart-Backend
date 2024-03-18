@@ -43,8 +43,7 @@ const registerUser = asyncHandler(async (req,res) => {
         await Cleaner.create({
             userId: user._id,
             name: name,
-            communityId,
-            assignedDustbins: []
+            communityId
         });
     }
     else {
