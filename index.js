@@ -24,11 +24,15 @@ app.use(cors(
 const testRoute = require('./routes/test_route');
 const authRoute = require('./routes/auth_route');
 const communityRoute = require('./routes/community_route');
+const complaintRoute = require('./routes/complaint_route');
+const dustbinRoute = require('./routes/dustbin_route');
 
 // Using routes
 app.use('/test', testRoute);
 app.use('/auth', authRoute);
 app.use('/community', communityRoute);
+app.use('/complaint', complaintRoute);
+app.use('/dustbin', dustbinRoute);
 
 // Start server
 app.listen(port, () => {

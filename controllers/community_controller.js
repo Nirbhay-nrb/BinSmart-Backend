@@ -1,5 +1,4 @@
 const asyncHandler = require('express-async-handler');
-const jwt = require('jsonwebtoken');
 const Community = require('../models/communities');
 
 // @desc Get all communities

@@ -10,10 +10,6 @@ const residentSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    complaints: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Complaint'
-    }]
 });
 
 

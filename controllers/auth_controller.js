@@ -52,7 +52,6 @@ const registerUser = asyncHandler(async (req,res) => {
             userId: user._id,
             name: name,
             communityId,
-            complaints: []
         });
     }
     // creating a token

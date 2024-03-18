@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
 const complaintSchema = new mongoose.Schema({
+    title: {
+        type: String,
+        required: true
+    },
     communityId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Community',
@@ -22,6 +26,15 @@ const complaintSchema = new mongoose.Schema({
     timeOfComplaint: {
         type: String,
         required: true
+    },
+    userId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    },
+    dustbinId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Dustbin'
     }
 });
 
