@@ -3,8 +3,7 @@ const mongoose = require('mongoose');
 const dustbinSchema = new mongoose.Schema({
     communityId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Community',
-        required: true
+        ref: 'Community'
     },
     location: {
         type: {
@@ -12,21 +11,22 @@ const dustbinSchema = new mongoose.Schema({
             floor: String,
             room: String,
             description: String
-        },
-        required: true
+        }
     },
     lastCleanedDate: {
-        type: String,
-        required: true
+        type: String
     },
     lastCleanedTime: {
-        type: String,
-        required: true
+        type: String
     },
     filledStatus: {
         type: Number,
         enum: [50, 75, 100],
         required: true
+    },
+    cleanerId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Cleaner'
     }
 });
 

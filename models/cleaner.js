@@ -15,10 +15,6 @@ const cleanerSchema = new mongoose.Schema({
         ref: 'Community',
         required: true
     },
-    assignedDustbins: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Dustbin'
-    }]
 });
 
 module.exports = mongoose.model('Cleaner', cleanerSchema);
