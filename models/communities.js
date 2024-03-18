@@ -28,22 +28,6 @@ const communitySchema = new mongoose.Schema({
         type: addressSchema,
         required: true,
     },
-    managers: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Manager'
-    }],
-    cleaners: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Cleaner'
-    }],
-    dustbins: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Dustbin'
-    }],
-    complaints: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Complaint'
-    }]
 });
 
 module.exports = mongoose.model('Community', communitySchema);

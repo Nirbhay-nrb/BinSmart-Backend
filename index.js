@@ -23,10 +23,12 @@ app.use(cors(
 // Importing routes
 const testRoute = require('./routes/test_route');
 const authRoute = require('./routes/auth_route');
+const communityRoute = require('./routes/community_route');
 
 // Using routes
 app.use('/test', testRoute);
 app.use('/auth', authRoute);
+app.use('/community', communityRoute);
 
 // Start server
 app.listen(port, () => {
