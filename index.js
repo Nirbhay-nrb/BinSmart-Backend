@@ -3,6 +3,7 @@ const express = require('express');
 const connectDb = require('./config/dbConnection');
 const cors = require('cors');
 const dotenv = require('dotenv').config();
+const runCronJob = require('./cron jobs/ping_server_cron');
 
 // Connect to the database
 connectDb();
@@ -38,3 +39,6 @@ app.use('/dustbin', dustbinRoute);
 app.listen(port, () => {
         console.log(`Server is running on port: ${port}`);
 });
+
+// cron jobs
+runCronJob();
